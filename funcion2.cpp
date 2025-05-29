@@ -22,10 +22,17 @@ int residuo(int a,int b){
 }
 int cociente(int c,int d){
 	int coci=0;
-	while(c>=d){
-		c=c-d;
-		coci=coci+1;
+	if (d==0){
+		cout<<"Nose puede realizar la operacion."<<endl;
 	}
-	return coci;	
+	else{
+	    while(c>=d){
+		   c=c-d;
+		   coci=coci+1;
+	    }
+	}
+	return coci;
 }
+	
+	
 
