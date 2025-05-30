@@ -3,7 +3,7 @@ using namespace std;
 int residuo(int,int);
 int cociente(int,int);
 int main(){
-	int num1,num2,res,coc;
+	int num1,num2,may,men,res,coc;
 	cout<<"Ingrese el primer numero: ";
 	cin>>num1;
 	cout<<"Ingrese el segundo numero: ";
@@ -12,10 +12,18 @@ int main(){
 		cout<<"Error:Debe ingresar numeros diferentes de cero."<<endl;
 	}
 	else{
-		res=residuo(num1,num2);
-	    cout<<"El residuo de la division de: "<<num1<<"/"<<num2<<" es: "<<res<<endl;
-	    coc=cociente(num1,num2);
-	    cout<<"El cociente de la divison de: "<<num1<<"/"<<num2<<" es: "<<coc<<endl;
+		if(num1>num2){
+			may=num1;
+			men=num2;
+		}
+		else{
+			may=num2;
+			men=num1;
+		}
+		res=residuo(may,men);
+	    cout<<"El residuo de la division de: "<<may<<"/"<<men<<" es: "<<res<<endl;
+	    coc=cociente(may,men);
+	    cout<<"El cociente de la divison de: "<<may<<"/"<<men<<" es: "<<coc<<endl;
 	}
 	  return 0;
 }
