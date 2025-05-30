@@ -8,10 +8,15 @@ int main(){
 	cin>>num1;
 	cout<<"Ingrese el segundo numero: ";
 	cin>>num2;
-	res=residuo(num1,num2);
-	cout<<"El residuo de la division es: "<<res<<endl;
-	coc=cociente(num1,num2);
-	cout<<"El cociente de la divison es: "<<coc<<endl;
+	if(num1==0||num2==0){
+		cout<<"Error:Debe ingresar numeros diferentes de cero."<<endl;
+	}
+	else{
+		res=residuo(num1,num2);
+	    cout<<"El residuo de la division de: "<<num1<<"/"<<num2<<" es: "<<res<<endl;
+	    coc=cociente(num1,num2);
+	    cout<<"El cociente de la divison de: "<<num1<<"/"<<num2<<" es: "<<coc<<endl;
+	}
 	  return 0;
 }
 int residuo(int a,int b){
@@ -22,15 +27,11 @@ int residuo(int a,int b){
 }
 int cociente(int c,int d){
 	int coci=0;
-	if (d==0){
-		cout<<"Nose puede realizar la operacion."<<endl;
+     while(c>=d){
+	    c=c-d;
+	    coci=coci+1;
 	}
-	else{
-	    while(c>=d){
-		   c=c-d;
-		   coci=coci+1;
-	    }
-	}
+	
 	return coci;
 }
 	
