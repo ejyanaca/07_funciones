@@ -5,12 +5,17 @@ int main(){
 	int n,s;
 	cout<<"Ingrese le numero: ";
 	cin>>n;
-	s=divisor(n);
-	if(s==n){
-		cout<<"Es un numero perfecto."<<endl;
+	if(n==0){
+		cout<<"Ingrese un numero diferente de cero."<<endl;
 	}
 	else{
-		cout<<"No es un numero perfecto."<<endl;
+		s=divisor(n);
+	    if(s==n){
+		    cout<<"Es un numero perfecto."<<endl;
+	    }
+	    else{
+		    cout<<"No es un numero perfecto."<<endl;
+	    }
 	}
 	return 0;
 	
