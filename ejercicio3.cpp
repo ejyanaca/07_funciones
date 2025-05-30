@@ -8,13 +8,16 @@ using namespace std;
     	cin>>n1;
     	cout<<"Ingrese el segundo numero: "<<endl;
     	cin>>n2;
-    	   if(divisores(n1)&&divisoress(n2)){
+    	if(n1==0||n2==0){
+    		cout<<"Error:Ingrese numeros diferentes de cero."<<endl;
+		}
+		else if(divisores(n1)&&divisoress(n2)){
     	   	cout<<"Los numeros son amigos.";
 		   } else {
 		    cout<<"Los numeros no son amigos.";
 		    
 		   }
-    	  return 0; 
+    return 0; 
 	}
 	int divisores(int m){
 		int s=0;
