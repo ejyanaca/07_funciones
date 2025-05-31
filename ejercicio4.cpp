@@ -6,10 +6,15 @@ int main(){
 	cout<<"Combinatoria de dos numeros."<<endl;
 	cout<<"Ingrese el numero de elementos: ";
 	cin>>m;
-	cout<<"Ingrese el numero de elementos seleccionados o agrupados: ";
-	cin>>n;
-	c=factorial(m)/(factorial(n)*factorial(m-n));
-	cout<<"La combinatoria de "<<m<<" y "<<n<<" es: "<<c<<endl;
+	if (m==0){
+		cout<<"Error:La cantidad de elementos debe ser mayor que cero."<<endl;
+	}
+	else{
+		cout<<"Ingrese el numero de elementos seleccionados o agrupados: ";
+	    cin>>n;
+	  	c=factorial(m)/(factorial(n)*factorial(m-n));
+	    cout<<"La combinatoria de "<<m<<" y "<<n<<" es: "<<c<<endl;
+	}
 	return 0;
 }
 int factorial (int n){
