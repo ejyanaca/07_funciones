@@ -12,8 +12,13 @@ int main(){
 	else{
 		cout<<"Ingrese el numero de elementos seleccionados o agrupados: ";
 	    cin>>n;
-	  	c=factorial(m)/(factorial(n)*factorial(m-n));
-	    cout<<"La combinatoria de "<<m<<" y "<<n<<" es: "<<c<<endl;
+	    if(m<n){
+	    	cout<<"Error: La cantidad de elementos debe ser mayor o igual al numero de elementos que quiere agrupar."<<endl;
+		}
+		else{
+			c=factorial(m)/(factorial(n)*factorial(m-n));
+	        cout<<"La combinatoria de "<<m<<" y "<<n<<" es: "<<c<<endl;
+		}
 	}
 	return 0;
 }
