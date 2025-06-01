@@ -8,8 +8,23 @@ int main(){
 	cin>>num1;
 	cout<<"Ingrese el segundo numero: ";
 	cin>>num2;
-	cout<<"El maximo comun divisor de "<<num1<<" y "<<num2<<" es "<<mcd(num1,num2)<<endl;
-	cout<<"El minimo comun multiplo de "<<num1<<" y "<<num2<<" es "<<mcm(num1,num2)<<endl;
+	if(num1==0&&num2==0){
+		cout<<"Error:El MCD y MCM no estan definidos."<<endl;
+	}
+	else if(num1==0||num2==0){
+		if(num1>num2){
+			cout<<"El maximo comun divisor de "<<num1<<" y "<<num2<<" es "<<num1<<endl;
+	        cout<<"El minimo comun multiplo de "<<num1<<" y "<<num2<<" No esta definido."<<endl;
+		}
+		else{
+			cout<<"El maximo comun divisor de "<<num1<<" y "<<num2<<" es "<<num2<<endl;
+	        cout<<"El minimo comun multiplo de "<<num1<<" y "<<num2<<" No esta definido."<<endl;
+		}
+	}
+	else{
+		cout<<"El maximo comun divisor de "<<num1<<" y "<<num2<<" es "<<mcd(num1,num2)<<endl;
+	    cout<<"El minimo comun multiplo de "<<num1<<" y "<<num2<<" es "<<mcm(num1,num2)<<endl;
+	}
 	return 0;
 }
 int mcd(int a,int b){
@@ -35,3 +50,4 @@ int mcm(int x,int y){
 	z=(x*y)/mcd(x,y);
 	return z;
 }
+
