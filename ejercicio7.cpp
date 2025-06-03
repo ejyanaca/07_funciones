@@ -6,21 +6,27 @@ int main(){
 	int n,s,opcion;
 	cout<<"Ingrese el valor de la serie: "<<endl;
 	cin>>n;
-	s= fibonacci(n);
-    cout<<"Desea la suma de fibonacci?"<<endl;
-    cout<<"1. Si"<<endl;
-    cout<<"2. No"<<endl;
-    cout<<"---------------"<<endl;
-    cin>>opcion;
-    cout<<"--------------"<<endl;
-    switch(opcion){
-    	case 1: cout<<"La suma es: "<<suma(n)<<endl;
-    	         break;
-    	case 2: cout<<"Okey";
-    	         break;
-    	default: cout<<"Coloque otra opcion."<<endl;
-    	         break; 
+	if(n<=0){
+		cout<<"Error: Ingrese numeros positivos mayores que cero."<<endl;
 	}
+	else{
+		s= fibonacci(n);
+        cout<<"Desea la suma de fibonacci?"<<endl;
+        cout<<"1. Si"<<endl;
+        cout<<"2. No"<<endl;
+        cout<<"---------------"<<endl;
+        cin>>opcion;
+        cout<<"--------------"<<endl;
+        switch(opcion){
+         	case 1: cout<<"La suma es: "<<suma(n)<<endl;
+    	         break;
+    	   case 2: cout<<"Okey";
+    	         break;
+    	    default: cout<<"Coloque otra opcion."<<endl;
+    	         break; 
+	    }
+	}
+
     return 0;
 }
       int fibonacci(int n){
